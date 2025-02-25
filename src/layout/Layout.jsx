@@ -16,7 +16,7 @@ function Layout({ children, showWelcome }) {
                     </span>
                 </footer>
             )}
-            <TailwindIndicator />
+            {/* <TailwindIndicator /> */}
         </div>
     );
 }
