@@ -2,7 +2,7 @@ import TailwindIndicator from "../components/TailwindIndicator";
 
 function Layout({ children, showWelcome }) {
     return (
-        <div className="min-w-[600px] bg-white">
+        <div className="min-w-[600px]">
             {children}
             {!showWelcome && (
                 <footer>
