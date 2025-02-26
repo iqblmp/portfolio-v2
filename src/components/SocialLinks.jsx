@@ -1,5 +1,5 @@
 import React from "react";
-import { Linkedin, Github, Instagram, Youtube, ExternalLink } from "lucide-react";
+import { Linkedin, Github, Instagram, Youtube, ExternalLink, Waypoints } from "lucide-react";
 
 const socialLinks = [
     {
@@ -81,7 +81,7 @@ const SocialLinks = () => {
     return (
         <div className="w-full bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-6 py-8 backdrop-blur-xl">
             <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
-                <span className="inline-block w-8 h-1 bg-indigo-500 rounded-full"></span>
+                <Waypoints className="w-7 h-7 text-indigo-500 font-black " />
                 Connect With Me
             </h3>
 

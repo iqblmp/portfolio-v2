@@ -122,7 +122,7 @@ const ContactPage = () => {
 
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div data-aos="fade-up" data-aos-delay="100" className="relative group">
-                                <User className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors" />
+                                <User className="absolute left-4 top-[18px]  w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors" />
                                 <input
                                     type="text"
                                     name="name"
@@ -135,7 +135,7 @@ const ContactPage = () => {
                                 />
                             </div>
                             <div data-aos="fade-up" data-aos-delay="200" className="relative group">
-                                <Mail className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors" />
+                                <Mail className="absolute left-4 top-[18px] w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors" />
                                 <input
                                     type="email"
                                     name="email"
@@ -148,7 +148,7 @@ const ContactPage = () => {
                                 />
                             </div>
                             <div data-aos="fade-up" data-aos-delay="300" className="relative group">
-                                <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors" />
+                                <MessageSquare className="absolute left-4 top-[18px]  w-5 h-5 text-gray-400 group-focus-within:text-[#6366f1] transition-colors" />
                                 <textarea
                                     name="message"
                                     placeholder="Your Message"

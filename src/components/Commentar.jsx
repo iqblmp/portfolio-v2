@@ -18,11 +18,11 @@ const Comment = memo(({ comment, formatDate, index }) => (
                 </div>
             )}
             <div className="flex-grow min-w-0">
-                <div className="flex items-center justify-between gap-4 mb-2">
+                <div className="flex items-center justify-between gap-4 mb-3">
                     <h4 className="font-medium text-white truncate">{comment.userName}</h4>
                     <span className="text-xs text-gray-400 whitespace-nowrap">{formatDate(comment.createdAt)}</span>
                 </div>
-                <p className="text-gray-300 text-sm break-words leading-relaxed relative bottom-2">{comment.content}</p>
+                <p className="text-gray-300 text-sm break-words leading-relaxed relative bottom-2 ">{comment.content}</p>
             </div>
         </div>
     </div>
@@ -75,7 +75,7 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
     return (
         <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2" data-aos="fade-up" data-aos-duration="1000">
-                <label className="block text-sm font-medium text-white">
+                <label className="block  font-medium text-white">
                     Name <span className="text-red-400">*</span>
                 </label>
                 <input
@@ -83,13 +83,13 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
                     value={userName}
                     onChange={(e) => setUserName(e.target.value)}
                     placeholder="Enter your name"
-                    className="w-full p-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all"
+                    className="w-full p-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all placeholder:text-sm"
                     required
                 />
             </div>
 
             <div className="space-y-2" data-aos="fade-up" data-aos-duration="1200">
-                <label className="block text-sm font-medium text-white">
+                <label className="block  font-medium text-white">
                     Message <span className="text-red-400">*</span>
                 </label>
                 <textarea
@@ -97,13 +97,13 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
                     value={newComment}
                     onChange={handleTextareaChange}
                     placeholder="Write your message here..."
-                    className="w-full p-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all resize-none min-h-[120px]"
+                    className="w-full p-4 rounded-xl bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all resize-none min-h-[120px] placeholder:text-sm"
                     required
                 />
             </div>
 
             <div className="space-y-2" data-aos="fade-up" data-aos-duration="1400">
-                <label className="block text-sm font-medium text-white">
+                <label className="block   font-medium text-white">
                     Profile Photo <span className="text-gray-400">(optional)</span>
                 </label>
                 <div className="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl">
@@ -120,7 +120,7 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
                                 className="flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/20 text-red-400 hover:bg-red-500/30 transition-all group"
                             >
                                 <X className="w-4 h-4" />
-                                <span>Remove Photo</span>
+                                <span className="text-sm">Remove Photo</span>
                             </button>
                         </div>
                     ) : (
@@ -132,9 +132,9 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
                                 className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-indigo-500/20 text-indigo-400 hover:bg-indigo-500/30 transition-all border border-dashed border-indigo-500/50 hover:border-indigo-500 group"
                             >
                                 <ImagePlus className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                                <span>Choose Profile Photo</span>
+                                <span className="text-sm">Choose Profile Photo</span>
                             </button>
-                            <p className="text-center text-gray-400 text-sm mt-2">Max file size: 5MB</p>
+                            <p className="text-center text-gray-400 mt-3 text-xs ">Max file size: 5MB</p>
                         </div>
                     )}
                 </div>
@@ -205,7 +205,11 @@ const Komentar = () => {
 
         const formData = new FormData();
         formData.append("file", imageFile);
+
         formData.append("upload_preset", "profile");
+
+        // upload certificate
+        // formData.append("upload_preset", "certificate");
 
         try {
             const response = await fetch("https://api.cloudinary.com/v1_1/ddve4hoqz/image/upload", {
@@ -223,24 +227,27 @@ const Komentar = () => {
         }
     }, []);
     const add = () => {
-        alert("add");
-        addDoc(collection(db, "projects"), {
-            Description:
-                "SMK Muhammadiyah Bumiayu Website is an official school website designed to provide essential information about the institution, academic programs, announcements, and student activities. Built using HTML, CSS, and JavaScript for a dynamic user experience, and Bootstrap for a responsive and modern layout.",
-            Features: [
-                "School profile and history section",
-                "News and announcements updates",
-                "Gallery for school activities and events",
-                "Contact form for inquiries",
-                "Responsive design for mobile and desktop users",
-                "Navigation-friendly interface for better user experience",
-            ],
-            Github: "https://github.com/iqblmp",
-            Link: "https://github.com/iqblmp",
-            Img: null,
-            TechStack: ["HTML", "CSS", "Javascript", "Bootstrap"],
-            Title: "SMK Muhammadiyah Bumiayu Website",
-        });
+        alert("success");
+
+        // create project
+
+        // addDoc(collection(db, "projects"), {
+        //     Description:
+        //         "SMK Muhammadiyah Bumiayu Website is an official school website designed to provide essential information about the institution, academic programs, announcements, and student activities. Built using HTML, CSS, and JavaScript for a dynamic user experience, and Bootstrap for a responsive and modern layout.",
+        //     Features: [
+        //         "School profile and history section",
+        //         "News and announcements updates",
+        //         "Gallery for school activities and events",
+        //         "Contact form for inquiries",
+        //         "Responsive design for mobile and desktop users",
+        //         "Navigation-friendly interface for better user experience",
+        //     ],
+        //     Github: "https://github.com/iqblmp",
+        //     Link: "https://github.com/iqblmp",
+        //     Img: null,
+        //     TechStack: ["HTML", "CSS", "Javascript", "Bootstrap"],
+        //     Title: "SMK Muhammadiyah Bumiayu Website",
+        // });
     };
 
     const handleCommentSubmit = useCallback(
@@ -256,6 +263,15 @@ const Komentar = () => {
                     profileImage: profileImageUrl,
                     createdAt: serverTimestamp(),
                 });
+
+                // create certificate
+
+                // await addDoc(collection(db, "certificates"), {
+                //     name: userName,
+                //     credentials: newComment,
+                //     Img: profileImageUrl,
+                //     createdAt: serverTimestamp(),
+                // });
             } catch (error) {
                 setError("Failed to post comment. Please try again.");
                 console.error("Error adding comment: ", error);
@@ -295,9 +311,9 @@ const Komentar = () => {
                     </div>
                     <h3 className="text-xl font-semibold text-white">
                         Comments <span className="text-indigo-400">({comments.length})</span>{" "}
-                        <button type="button" onClick={add}>
+                        {/* <button type="button" onClick={add}>
                             ADD{" "}
-                        </button>
+                        </button> */}
                     </h3>
                 </div>
             </div>

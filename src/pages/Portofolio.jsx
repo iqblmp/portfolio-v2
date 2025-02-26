@@ -98,15 +98,27 @@ const techStacks = [
     { icon: "html.svg", language: "HTML" },
     { icon: "css.svg", language: "CSS" },
     { icon: "javascript.svg", language: "JavaScript" },
-    { icon: "tailwind.svg", language: "Tailwind CSS" },
-    { icon: "reactjs.svg", language: "ReactJS" },
-    { icon: "vite.svg", language: "Vite" },
+    { icon: "ts.svg", language: "TypeScript" },
+    { icon: "php.svg", language: "PHP" },
     { icon: "nodejs.svg", language: "Node JS" },
+    { icon: "sass.svg", language: "SASS" },
+    { icon: "tailwind.svg", language: "Tailwind CSS" },
     { icon: "bootstrap.svg", language: "Bootstrap" },
+    { icon: "reactjs.svg", language: "React" },
+    { icon: "redux.svg", language: "Redux" },
+    { icon: "motion.png", language: "Motion" },
+    { icon: "vite.svg", language: "Vite" },
+    { icon: "nextjs.svg", language: "Next JS" },
+    { icon: "expressjs.svg", language: "Express JS" },
+    { icon: "laravel.svg", language: "Laravel" },
+    { icon: "mysql.svg", language: "MySQL" },
+    { icon: "mongodb.svg", language: "MongoDB" },
     { icon: "firebase.svg", language: "Firebase" },
+    { icon: "git.svg", language: "Git" },
+    { icon: "figma.svg", language: "Figma" },
+    { icon: "shadcn.png", language: "Shadcn UI" },
     { icon: "MUI.svg", language: "Material UI" },
     { icon: "vercel.svg", language: "Vercel" },
-    { icon: "SweetAlert.svg", language: "SweetAlert2" },
 ];
 
 export default function FullWidthTabs() {
@@ -270,9 +282,15 @@ export default function FullWidthTabs() {
                 {/* <SwipeableViews axis={theme.direction === "rtl" ? "x-reverse" : "x"} index={value} onChangeIndex={setValue}> */}
                 <TabPanel value={value} index={0} dir={theme.direction}>
                     <div className="container mx-auto flex justify-center items-center overflow-hidden">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-5">
+                        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-5"> */}
+                        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
                             {displayedProjects.map((project, index) => (
-                                <div key={project.id || index} data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"} data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}>
+                                <div
+                                    key={project.id || index}
+                                    className="break-inside-avoid"
+                                    data-aos={index % 3 === 0 ? "fade-up-right" : index % 3 === 1 ? "fade-up" : "fade-up-left"}
+                                    data-aos-duration={index % 3 === 0 ? "1000" : index % 3 === 1 ? "1200" : "1000"}
+                                >
                                     <CardProject Img={project.Img} Title={project.Title} Description={project.Description} Link={project.Link} id={project.id} />
                                 </div>
                             ))}
