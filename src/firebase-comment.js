@@ -4,12 +4,12 @@ import { getStorage } from "firebase/storage";
 import { collection, addDoc } from "@firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCAYtYBrF76anL6ci0EscwSlU4o4_d15qw",
-    authDomain: "iqbalmp-portofolio.firebaseapp.com",
-    projectId: "iqbalmp-portofolio",
-    storageBucket: "iqbalmp-portofolio.firebasestorage.app",
-    messagingSenderId: "654415480370",
-    appId: "1:654415480370:web:e8787219b8b7e9ff5bde2b",
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 // Initialize with a unique name
