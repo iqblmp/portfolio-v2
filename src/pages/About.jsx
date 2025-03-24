@@ -167,9 +167,9 @@ const AboutPage = () => {
                         </h2>
 
                         <p className=" sm:text-lg lg:text-xl text-gray-400 leading-relaxed pb-4 sm:pb-0 " data-aos="fade-right" data-aos-duration="1500">
-                            With hands-on experience in building web applications using modern technologies like <span className="text-white">React, Next.js, Express.js,</span> and <span className="text-white">Laravel</span>, I specialize
-                            in crafting seamless and interactive user experiences. With a strong background in <span className=" text-white">Informatics Engineering</span>, I’m passionate about solving complex problems, learning emerging
-                            technologies, and pushing the boundaries of web development. My mission is to develop <span className="text-white">innovative, efficient, and impactful digital solutions.</span>
+                            With hands-on experience in building web applications using modern technologies like <span className="text-white">React, Vue.js, Next.js, Express.js,</span> and <span className="text-white">Laravel</span>, I
+                            specialize in crafting seamless and interactive user experiences. With a strong background in <span className=" text-white">Informatics Engineering</span>, I’m passionate about solving complex problems, learning
+                            emerging technologies, and pushing the boundaries of web development. My mission is to develop <span className="text-white">innovative, efficient, and impactful digital solutions.</span>
                         </p>
 
                         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">

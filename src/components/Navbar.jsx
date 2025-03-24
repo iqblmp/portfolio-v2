@@ -70,8 +70,9 @@ const Navbar = () => {
                 <div className="flex items-center justify-between h-16 ">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                        <a href="#Home" onClick={(e) => scrollToSection(e, "#Home")} className="text-xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent flex gap-x-2 items-center">
-                            <img src="./logo.svg" alt="Iqbalmp" className="w-6 lg:w-8   bg-gradient-to-r from-[#a855f7] to-[#6366f1] shadow-md shadow-purple-500/50 hover:scale-105 transition-transform duration-300" /> IMP
+                        <a href="#Home" onClick={(e) => scrollToSection(e, "#Home")} className="text-xl font-bold bg-gradient-to-r to-[#ffffff] via-[#28456c] from-[#28456c] bg-clip-text text-transparent flex  items-center">
+                            <img src="./logo.svg" alt="Iqbalmp" className="w-6 lg:w-8" />
+                            Iqbalmp
                         </a>
                     </div>
 

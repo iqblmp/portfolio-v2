@@ -76,7 +76,7 @@ const WORDS = [
     "Innovating with Code & Creativity.",
     "Transforming Designs into Reality.",
 ];
-const TECH_STACK = ["React", "Next.js", "Express.js", "Laravel"];
+const TECH_STACK = ["React", "Vue.js", "Next.js", "Express.js", "Laravel"];
 const SOCIAL_LINKS = [
     { icon: Github, link: "https://github.com/iqblmp" },
     { icon: Linkedin, link: "https://www.linkedin.com/in/iqblmp" },
