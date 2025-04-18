@@ -149,82 +149,84 @@ const Home = () => {
     };
 
     return (
-        <div className="min-h-screen overflow-hidden pt-2 lg:pt-10 " id="Home">
-            <div className={`relative z-10 transition-all duration-1000 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
-                <div className=" px-[5%] sm:px-6 lg:px-[7%] min-h-screen">
-                    <div className="flex flex-col lg:flex-row items-center justify-center h-screen md:justify-between gap-0 sm:gap-12 lg:gap-16">
-                        {/* Left Column */}
-                        <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8 text-left lg:text-left order-1 lg:order-1 lg:mt-0" data-aos="fade-right" data-aos-delay="200">
-                            <div className="space-y-4 sm:space-y-6">
-                                <StatusBadge />
-                                <MainTitle />
+        <>
+            <div className="min-h-screen overflow-hidden pt-4 lg:pt-10" id="Home">
+                <div className={`relative z-10 transition-all duration-1000 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
+                    <div className="px-4 sm:px-6 lg:px-[7%]">
+                        <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen gap-y-16 lg:gap-16">
+                            {/* Left Column */}
+                            <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8  lg:text-left " data-aos="fade-right" data-aos-delay="200">
+                                <div className="space-y-4 sm:space-y-6">
+                                    <StatusBadge />
+                                    <MainTitle />
 
-                                {/* Typing Effect */}
-                                <div className="h-8 flex items-center" data-aos="fade-up" data-aos-delay="800">
-                                    <span className="text-lg md:text-2xl bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent ">{text}</span>
-                                    <span className="w-[3px] h-6 bg-gradient-to-t from-[#6366f1] to-[#a855f7] ml-1 animate-blink"></span>
-                                </div>
+                                    {/* Typing Effect */}
+                                    <div className="h-8 flex items-center  lg:justify-start" data-aos="fade-up" data-aos-delay="800">
+                                        <span className="text-lg md:text-2xl bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent">{text}</span>
+                                        <span className="w-[3px] h-6 bg-gradient-to-t from-[#6366f1] to-[#a855f7] ml-1 animate-blink"></span>
+                                    </div>
 
-                                {/* Description */}
-                                <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light" data-aos="fade-up" data-aos-delay="1000">
-                                    A passionate Software Engineer dedicated to creating interactive, fast, and responsive user interfaces.
-                                    <br /> Explore my portfolio to see my latest projects!
-                                </p>
+                                    {/* Description */}
+                                    <p className="text-base  md:text-lg text-gray-400 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light" data-aos="fade-up" data-aos-delay="1000">
+                                        A passionate Software Engineer dedicated to creating interactive, fast, and responsive user interfaces.
+                                        <br /> Explore my portfolio to see my latest projects!
+                                    </p>
 
-                                {/* Tech Stack */}
-                                <div className="flex flex-wrap gap-3 justify-start" data-aos="fade-up" data-aos-delay="1200">
-                                    {TECH_STACK.map((tech, index) => (
-                                        <TechStack key={index} tech={tech} />
-                                    ))}
-                                </div>
+                                    {/* Tech Stack */}
+                                    <div className="flex flex-wrap gap-3 justify-center lg:justify-start" data-aos="fade-up" data-aos-delay="1200">
+                                        {TECH_STACK.map((tech, index) => (
+                                            <TechStack key={index} tech={tech} />
+                                        ))}
+                                    </div>
 
-                                {/* CTA Buttons */}
-                                <div className="flex flex-row gap-3 w-full justify-start" data-aos="fade-up" data-aos-delay="1400">
-                                    <CTAButton href="#Portofolio" text="Projects" icon={ExternalLink} />
-                                    <CTAButton href="#Contact" text="Contact" icon={Mail} />
-                                </div>
+                                    {/* CTA Buttons */}
+                                    <div className="flex flex-row flex-wrap gap-3 justify-center lg:justify-start" data-aos="fade-up" data-aos-delay="1400">
+                                        <CTAButton href="#Portofolio" text="Projects" icon={ExternalLink} />
+                                        <CTAButton href="#Contact" text="Contact" icon={Mail} />
+                                    </div>
 
-                                {/* Social Links */}
-                                <div className="hidden sm:flex gap-4 justify-start" data-aos="fade-up" data-aos-delay="1600">
-                                    {SOCIAL_LINKS.map((social, index) => (
-                                        <SocialLink key={index} {...social} />
-                                    ))}
+                                    {/* Social Links */}
+                                    <div className="hidden sm:flex gap-4 justify-center lg:justify-start" data-aos="fade-up" data-aos-delay="1600">
+                                        {SOCIAL_LINKS.map((social, index) => (
+                                            <SocialLink key={index} {...social} />
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {/* Right Column - Optimized Lottie Animation */}
-                        <div
-                            className="w-full py-[10%] sm:py-0 lg:w-1/2 h-auto lg:h-[600px] xl:h-[750px] relative flex items-center justify-center order-2 lg:order-2 mt-8 lg:mt-0"
-                            onMouseEnter={() => setIsHovering(true)}
-                            onMouseLeave={() => setIsHovering(false)}
-                            data-aos="fade-left"
-                            data-aos-delay="600"
-                        >
-                            <div className="relative w-full opacity-90">
-                                <div
-                                    className={`absolute inset-0 bg-gradient-to-r from-[#6366f1]/10 to-[#a855f7]/10 rounded-3xl blur-3xl transition-all duration-700 ease-in-out ${
-                                        isHovering ? "opacity-50 scale-105" : "opacity-20 scale-100"
-                                    }`}
-                                ></div>
-
-                                <div className={`relative z-10 w-full opacity-90 transform transition-transform duration-500 ${isHovering ? "scale-105" : "scale-100"}`}>
-                                    <DotLottieReact {...lottieOptions} />
-                                </div>
-
-                                <div className={`absolute inset-0 pointer-events-none transition-all duration-700 ${isHovering ? "opacity-50" : "opacity-20"}`}>
+                            {/* Right Column - Lottie Animation */}
+                            <div
+                                className="w-full lg:w-1/2 h-auto lg:h-[600px] xl:h-[750px] relative flex items-center justify-center "
+                                onMouseEnter={() => setIsHovering(true)}
+                                onMouseLeave={() => setIsHovering(false)}
+                                data-aos="fade-left"
+                                data-aos-delay="600"
+                            >
+                                <div className="relative w-full opacity-90">
                                     <div
-                                        className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gradient-to-br from-indigo-500/10 to-purple-500/10 blur-3xl animate-[pulse_6s_cubic-bezier(0.4,0,0.6,1)_infinite] transition-all duration-700 ${
-                                            isHovering ? "scale-110" : "scale-100"
+                                        className={`absolute inset-0 bg-gradient-to-r from-[#6366f1]/10 to-[#a855f7]/10 rounded-3xl blur-3xl transition-all duration-700 ease-in-out ${
+                                            isHovering ? "opacity-50 scale-105" : "opacity-20 scale-100"
                                         }`}
-                                    ></div>
+                                    />
+
+                                    <div className={`relative z-10 w-full opacity-90 transform transition-transform duration-500 ${isHovering ? "scale-105" : "scale-100"}`}>
+                                        <DotLottieReact {...lottieOptions} />
+                                    </div>
+
+                                    <div className={`absolute inset-0 pointer-events-none transition-all duration-700 ${isHovering ? "opacity-50" : "opacity-20"}`}>
+                                        <div
+                                            className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-gradient-to-br from-indigo-500/10 to-purple-500/10 blur-3xl animate-[pulse_6s_cubic-bezier(0.4,0,0.6,1)_infinite] transition-all duration-700 ${
+                                                isHovering ? "scale-110" : "scale-100"
+                                            }`}
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

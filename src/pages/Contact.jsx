@@ -115,7 +115,7 @@ const ContactPage = () => {
                         <div className="flex justify-between items-start mb-8">
                             <div>
                                 <h2 className="text-4xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">Get in Touch</h2>
-                                <p className="text-gray-400">Have something to discuss? Send me a message and let's talk.</p>
+                                <p className=" text-gray-400">Have something to discuss? Send me a message and let's talk.</p>
                             </div>
                             <Share2 className="w-10 h-10 text-[#6366f1] opacity-50" />
                         </div>

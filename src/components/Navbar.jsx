@@ -70,9 +70,9 @@ const Navbar = () => {
                 <div className="flex items-center justify-between h-16 ">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                        <a href="#Home" onClick={(e) => scrollToSection(e, "#Home")} className="text-xl font-bold bg-gradient-to-r to-[#ffffff] via-[#28456c] from-[#28456c] bg-clip-text text-transparent flex  items-center">
+                        <a href="#Home" onClick={(e) => scrollToSection(e, "#Home")} className=" text-lg lg:text-xl font-bold bg-gradient-to-r to-[#ffffff] via-[#28456c] from-[#28456c] bg-clip-text text-transparent flex  items-center">
                             <img src="./logo.svg" alt="Iqbalmp" className="w-6 lg:w-8" />
-                            Iqbalmp
+                            Iqblmp
                         </a>
                     </div>
 

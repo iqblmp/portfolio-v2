@@ -109,7 +109,7 @@ const WelcomeScreen = ({ onLoadingComplete }) => {
 
                             {/* Welcome Text */}
                             <motion.div className="text-center mb-6 sm:mb-8 md:mb-12" variants={childVariants}>
-                                <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold space-y-2 sm:space-y-4">
+                                <h1 className="text-4xl  md:text-6xl font-bold space-y-2 md:space-y-4">
                                     <div className="mb-2 sm:mb-4">
                                         <span data-aos="fade-right" data-aos-delay="200" className="inline-block  bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
                                             Welcome
