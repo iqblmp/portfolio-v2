@@ -3,6 +3,17 @@ import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, UserCheck } from 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+const DownloadCV = () => {
+    console.log("download");
+    const cvUrl = "/cv.pdf";
+    const link = document.createElement("a");
+    link.href = cvUrl;
+    link.download = "cv.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+
 // Memoized Components
 const Header = memo(() => (
     <div className="text-center lg:mb-8 mb-2 px-[5%]">
@@ -166,22 +177,23 @@ const AboutPage = () => {
                             </span>
                         </h2>
 
-                        <p className=" sm:text-lg lg:text-xl text-gray-400 leading-relaxed pb-4 sm:pb-0 " data-aos="fade-right" data-aos-duration="1500">
-                            With hands-on experience in building web applications using modern technologies like <span className="text-white">React, Vue.js, Next.js, Express.js,</span> and <span className="text-white">Laravel</span>, I
-                            specialize in crafting seamless and interactive user experiences. With a strong background in <span className=" text-white">Informatics Engineering</span>, I’m passionate about solving complex problems, learning
-                            emerging technologies, and pushing the boundaries of web development. My mission is to develop <span className="text-white">innovative, efficient, and impactful digital solutions.</span>
+                        <p className=" text-lg lg:text-xl text-gray-400 leading-relaxed pb-4 " data-aos="fade-right" data-aos-duration="1500">
+                            With hands-on experience in building web applications using modern technologies like <span className="text-white">Next.js, Nuxt.js, Express.js,</span> and <span className="text-white">Laravel</span>, I specialize
+                            in crafting seamless and interactive user experiences. With a strong background in <span className=" text-white">Informatics Engineering</span>, I’m passionate about solving complex problems, learning emerging
+                            technologies, and pushing the boundaries of web development. My mission is to develop <span className="text-white">innovative, efficient, and impactful digital solutions.</span>
                         </p>
 
                         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
-                            <a href="https://iqbalmp-v1.vercel.app/cv/cv.pdf" className="w-full lg:w-auto">
-                                <button
-                                    data-aos="fade-up"
-                                    data-aos-duration="800"
-                                    className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl animate-bounce-slow"
-                                >
-                                    <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
-                                </button>
-                            </a>
+                            {/* <a href="https://iqbalmp.vercel.app/cv.pdf" className="w-full lg:w-auto"> */}
+                            <button
+                                onClick={DownloadCV}
+                                data-aos="fade-up"
+                                data-aos-duration="800"
+                                className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl animate-bounce-slow"
+                            >
+                                <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
+                            </button>
+                            {/* </a> */}
                             <a href="#Portofolio" className="w-full lg:w-auto">
                                 <button
                                     data-aos="fade-up"

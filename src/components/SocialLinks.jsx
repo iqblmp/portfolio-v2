@@ -77,9 +77,9 @@ const SocialLinks = () => {
     const linkedIn = socialLinks.find((link) => link.isPrimary);
     const otherLinks = socialLinks.filter((link) => !link.isPrimary);
     const [instagram, youtube, github, tiktok] = otherLinks;
-    // bg-gradient-to-br from-white/10 to-white/5
+    // backdrop-blur-xl
     return (
-        <div className="w-full  rounded-2xl p-6 py-8 backdrop-blur-xl ">
+        <div className="w-full  rounded-2xl p-6 py-8 bg-gradient-to-br from-white/10 to-white/5 ">
             <h3 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
                 <Waypoints className="w-7 h-7 text-indigo-500 font-black " />
                 Connect With Me

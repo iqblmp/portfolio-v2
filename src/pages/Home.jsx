@@ -21,7 +21,7 @@ const StatusBadge = memo(() => (
 
 const MainTitle = memo(() => (
     <div className="space-y-2" data-aos="fade-up" data-aos-delay="600">
-        <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
+        <h1 className="text-5xl  md:text-6xl lg:text-6xl xl:text-7xl font-bold tracking-tight">
             <span className="relative inline-block">
                 <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20"></span>
                 <span className="relative bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">Hi, I'm Iqbal</span>
@@ -76,7 +76,7 @@ const WORDS = [
     "Innovating with Code & Creativity.",
     "Transforming Designs into Reality.",
 ];
-const TECH_STACK = ["React", "Vue.js", "Next.js", "Express.js", "Laravel"];
+const TECH_STACK = ["Next.js", "Nuxt.js", "Express.js", "Laravel"];
 const SOCIAL_LINKS = [
     { icon: Github, link: "https://github.com/iqblmp" },
     { icon: Linkedin, link: "https://www.linkedin.com/in/iqblmp" },
@@ -149,10 +149,10 @@ const Home = () => {
     };
 
     return (
-        <div className="min-h-screen overflow-hidden pt-10 " id="Home">
+        <div className="min-h-screen overflow-hidden pt-2 lg:pt-10 " id="Home">
             <div className={`relative z-10 transition-all duration-1000 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
                 <div className=" px-[5%] sm:px-6 lg:px-[7%] min-h-screen">
-                    <div className="flex flex-col lg:flex-row items-center justify-center h-screen md:justify-between gap-0 sm:gap-12 lg:gap-20">
+                    <div className="flex flex-col lg:flex-row items-center justify-center h-screen md:justify-between gap-0 sm:gap-12 lg:gap-16">
                         {/* Left Column */}
                         <div className="w-full lg:w-1/2 space-y-6 sm:space-y-8 text-left lg:text-left order-1 lg:order-1 lg:mt-0" data-aos="fade-right" data-aos-delay="200">
                             <div className="space-y-4 sm:space-y-6">
@@ -161,7 +161,7 @@ const Home = () => {
 
                                 {/* Typing Effect */}
                                 <div className="h-8 flex items-center" data-aos="fade-up" data-aos-delay="800">
-                                    <span className="text-xl md:text-2xl bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent ">{text}</span>
+                                    <span className="text-lg md:text-2xl bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-transparent ">{text}</span>
                                     <span className="w-[3px] h-6 bg-gradient-to-t from-[#6366f1] to-[#a855f7] ml-1 animate-blink"></span>
                                 </div>
 
